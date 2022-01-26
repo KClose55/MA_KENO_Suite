@@ -11,7 +11,6 @@ import time
 import numpy as np
 import datetime
 import requests
-import traceback
 from datetime import date
 pd.options.mode.chained_assignment=None
 
