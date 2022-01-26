@@ -8,16 +8,32 @@ Version:<br>Majority of the python was written in 3.9.7. The rest was written in
 
 <h6><i>Scripting was designed to run in low end computers as I'm using a gaming rig i built 13-14 years ago (check below for specs). Datasets are split and methods involved in the import involve pd.concat on large number of smaller datasets. Due to low performance issue, much of the code is designed for efficiency, while i admit, due to learning over time, there are parts of the code that can still be patched for better performance.</i></h6>
 
-<br><h3>"Python Application": Description.</h3>
-"run_KENO.py": Main application for checking highest occuring numbers, making predictions by call, making predictions by automatic mode, etc.... All around application.
-<br><br>"quick_KENO.py": Quickly generates top profit original-type predictions for 6,7 and 12 spot games.
-<br><br>"pred_testing.py": Application that takes in all predictions and spits out a complete means dataset, 3 datasets corresponding to the prediction types with all profitable combinations, an option with the ability to check any combinations mean, and an option to check any combinations profit value counts.
-<br><br>"check_KENO.py": Check a KENO ticket
-<br><br>"plot_KENO.py": Very simple application to plot value counts over time in a readable manner. (run in interactive shell like an editor)
+<br><h3>Python Application: Description.</h3>
+<b>run_KENO.py:</b> Main application for checking highest occuring numbers, making predictions by call, making predictions by automatic mode, etc.... All around application.
+<br><br><b>quick_KENO.py:</b> Quickly generates top profit original-type predictions for 6,7 and 12 spot games.
+<br><br><b>pred_testing.py:</b> Application that takes in all predictions and spits out a complete means dataset, 3 datasets corresponding to the prediction types with all profitable combinations, an option with the ability to check any combinations mean, and an option to check any combinations profit value counts.
+<br><br><b>check_KENO.py:</b> Check a KENO ticket
+<br><br><b>plot_KENO.py:</b> Very simple application to plot value counts over time in a readable manner. (run in interactive shell like an editor)
 
 <br><h3>Python Application Customizations:</h3>
-to be continued tomorrow...
+<b>run_KENO.py</b>
+- default previous games: adjust variable <b><i>def_prev_l</b></i> to add/change default previous games used for prediction generation<br>
+- default number of spots: adjust variable <b><i>def_spot_l</b></i> to add/change your choice of spot numbers for prediction generation<br>
+- prediction dataset size for saving: adjust <b><i>if len(dfpredtr)>=500000:</b></i> to whatever number of entries you prefer it to split prediction datasets into in order to be able to import on your computer. (currently set to 500,000, 3 occurances)
 
+<b>quick_KENO.py</b>
+- default prediction options: at the end of the application there are 3 listings of <b><i>draw_pred_2</b></i> that you can adjust for your specific combination selection : <i><b> draw_pred_2(<previous game #>, <# of spots for game>, <"O" prediction type selection>) </i></b>
+
+<b>pred_testing.py</b>
+- would recommend adjusting variables <b><i>def_prev_l</b></i> and <b><i>def_spot_l</b></i> to correspond to run_KENO.py or whatever specific predictions you're interested in analyzing
+- if using the automatic mode, everytime it saves a prediction dataset it names it "dfpredX" where X is the number that it is in order from 1 to whatever number of datasets you have. (ie: 62 is what is in the KENO folder plus the original dfpred which is the active/changing dataset)<br>Add:<br><i><b>print(' dfX...')<br>
+dfX=pd.read_pickle('KENO//dfpredX.pkl')<br>
+  dfX.drop(columns=drop_cols, inplace=True)</i></b><br> adjusting the X for the number of the new dataset in the folder you'd like to add to prediction analysis. also must add the dfX to the concat and delete area right below the dataset imports. New datasets should be added between the last dfX and dfpred/dfpredC (currently you'd put new one between df62 and dfpredC)
+- if you wish to change what is considered "green" in predictions change the ">=0" to whatever you prefer to consider "green"<br> 3 spots:<br><i><b>if dfprmean.loc[pind,pcol]>=0:<br> if dfprmean.loc[pindX,pcolX]>=0:<br>if dfprmean.loc[pindZ,pcolZ]>=0:</i></b>
+
+<b>plot_KENO.py</b>
+- at bottom of script you will see <b><i>tempdf=df.tail(200)</b></i>. all you have to do is adjust the index on the dataframe which has been reduced to a single column of just the drawn numbers. if you want the last X game you can use the "tail()" call otherwise use ".iloc[]" with the proper indexing. it takes in rows first so for example <b><i>tempdf=df.iloc[-200:-100]</b></i> would give you the first 100 games of the last 200 games to put it simply. make sure to name the dataframe with the <b><i> tempdf.name = "" </b></i> as this is what is used to name the saved files which can be located in the PLOTS folder after you run the function. there are many commented out examples of proper syntax.
+  
 <br><h3>Prediction Types</h3>
 "O": Original prediction types. Based on occurances in general. Regardless to when they fell.
 <br><br>"X": Positional prediction types. Based on when the occurances occurred. Splits the 20 drawn numbers into bins based on how many numbers you choose. Then predicts based on occurances in those bins.
