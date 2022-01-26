@@ -33,6 +33,7 @@ dfX=pd.read_pickle('KENO//dfpredX.pkl')<br>
 
 <b>plot_KENO.py</b>
 - at bottom of script you will see <b><i>tempdf=df.tail(200)</b></i>. all you have to do is adjust the index on the dataframe which has been reduced to a single column of just the drawn numbers. if you want the last X game you can use the "tail()" call otherwise use ".iloc[]" with the proper indexing. it takes in rows first so for example <b><i>tempdf=df.iloc[-200:-100]</b></i> would give you the first 100 games of the last 200 games to put it simply. make sure to name the dataframe with the <b><i> tempdf.name = "" </b></i> as this is what is used to name the saved files which can be located in the PLOTS folder after you run the function. there are many commented out examples of proper syntax.
+- currently configured to choose number of highest occuring and plot, and number of lowest occuring and plot. out of the box its designed to do 20 highest and 20 lowest, which if you run will find difficult to read. i recommend 3-5 on both. to change the number of numbers it plots you must change the "20" in <b><i> for WKnum in last_dicE.most_common(20): </b></i> and change the "-20" in <b><i> for LKnum in last_dicE.most_common()[-20:]: </b></i> with the WKnum referencing the most occuring (winning) and the LKnum references the least occuring (losing).
   
 <br><h3>Prediction Types</h3>
 "O": Original prediction types. Based on occurances in general. Regardless to when they fell.
