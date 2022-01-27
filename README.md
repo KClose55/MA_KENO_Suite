@@ -44,6 +44,9 @@ dfX=pd.read_pickle('KENO//dfpredX.pkl')<br>
 <br><br>"Z": Mixed-type Predictions are 4 variations that involve combinations of the other 2 prediction types.
 <h6><i>*All prediction types are in some way based on a theory/idea of long term occurance vs. short term luck.</i></h6>
 
-<br><h6><b>Date Started Project: 10/25/2021<br>Date First Commit: 01/25/2022</b></h6>
-
 <br><h6>My (low-end) PC Specs:<br>CPU: Intel Core 2 Quad CPU @ 2.4GHz x 4<br>Memory: 7.8 GiB<br>GPU: NVIDIA G92 [GeForce GTS 250] v:a2<br>Motherboard: ASUS Striker Extreme</h6>
+
+<br><h6><b>Date Started Project: 10/25/2021<br>Date First Commit: 01/25/2022</b></h6>
+<h6>This project is also being used as a resume portfolio piece. Currently looking to leave the restaurant industry forever. Please send me an email at <i>keehan_close@comcast.net</i> if you're looking for entry level developers. Preference in working in data science, but on account of needing to change professions ASAP, I would love any opportunity in development. On account of a lack of formal degrees or certifications (all self taught via free coursewares) negotiations in regards to salary, would be understandable.</h6>
+  
+RESUME: [HERE](https://drive.google.com/file/d/1M_U5jESWnO8AeCtAqVh4oi5GHGEHxkBb/view?usp=sharing)
