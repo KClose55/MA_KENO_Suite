@@ -1,7 +1,7 @@
 # Massachusetts KENO Suite
 <h5>Collection of various python scripts for predicting and checking results of Massachusetts KENO.</h5>
 
-<br><h3>Requirements:</h3>
+<br><h3>Installation/Requirements:</h3>
 After cloning the repository, download and extract the "KENO" folder from [HERE](https://drive.google.com/file/d/1jRfkWU4BCPhi9eZOmE5DHgx2QxaTA82K/view?usp=sharing) to the "MA_KENO_Suite" directory.<br><br>
 Version:<br>Majority of the python was written in 3.9.7. The rest was written in 3.8.5 on account of OS switch to Ubuntu 20.04 which uses native 3.8.5. On account of complete compatibility I saw no reason to force 3.9.7 for remaining script.
 <br><br>Python Libraries:<br>pandas, numpy, matplotlib, requests
