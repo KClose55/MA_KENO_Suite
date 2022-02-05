@@ -3,7 +3,7 @@
 
 <br><h3>Installation/Requirements:</h3>
 After cloning the repository, download and extract the "KENO" folder from [HERE](https://drive.google.com/file/d/1jRfkWU4BCPhi9eZOmE5DHgx2QxaTA82K/view?usp=sharing) to the "MA_KENO_Suite" directory.<br><br>
-Version:<br>Majority of the python was written in 3.9.7. The rest was written in 3.8.5 on account of OS switch to Ubuntu 20.04 which uses native 3.8.5. On account of complete compatibility I saw no reason to force 3.9.7 for remaining script.
+Version:<br>Majority of the python was written in 3.9.7. The rest was written in 3.8.10 on account of OS switch to Ubuntu 20.04 which uses native 3.8.10. On account of complete compatibility I saw no reason to force 3.9.7 for remaining script.
 <br><br>Python Libraries:<br>pandas, numpy, matplotlib, requests
 
 <h6><i>Scripting was designed to run in low end computers as I'm using a gaming rig i built 13-14 years ago (check below for specs). Datasets are split and methods involved in the import involve pd.concat on large number of smaller datasets. Due to low performance issue, much of the code is designed for efficiency, while i admit, due to learning over time, there are parts of the code that can still be patched for better performance.</i></h6>
