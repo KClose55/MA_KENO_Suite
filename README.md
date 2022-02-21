@@ -49,4 +49,4 @@ dfX=pd.read_pickle('KENO//dfpredX.pkl')<br>
 <br><h6><b>Date Started Project: 10/25/2021<br>Date First Commit: 01/25/2022</b></h6>
 <h6>This project is also being used as a resume portfolio piece. Currently looking to leave the restaurant industry forever. Please send me an email at <i>keehan_close@comcast.net</i> if you're looking for entry level developers. Preference in working in data science, but on account of needing to change professions ASAP, I would love any opportunity in development. On account of a lack of formal degrees or certifications (all self taught via free coursewares) negotiations in regards to salary, would be understandable.</h6>
   
-RESUME: [HERE](https://drive.google.com/file/d/1aCtLv2Il3alcRCOEeTAJuKBMHj9rK7ap/view?usp=sharing)
+RESUME: [HERE](https://drive.google.com/file/d/1JxI82J4vFPr7zBtpC4R6QeppiQ4q0fwY/view?usp=sharing)
